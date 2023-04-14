@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Furaha Systems Knowbank',
+  title: 'Knowbank',
   tagline: 'Consult and share your knowledge and experiences with the team!',
   favicon: 'img/favicon.ico',
 
@@ -40,6 +40,7 @@ const config = {
         docs: false,
         blog: {
           showReadingTime: true,
+          routeBasePath: '/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -54,16 +55,15 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Furaha Systems',
+        title: 'Knowbank',
         logo: {
-          alt: 'Furaha Knowbank Logo',
+          alt: 'Furaha Systems Logo',
           src: 'img/furaha.png',
         },
         items: [
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/Furaha-Systems/knowbank',
-            label: 'GitHub',
+            label: 'Contribute',
             position: 'left',
           },
         ],
