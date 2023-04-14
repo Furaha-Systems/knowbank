@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Knowbank',
-  tagline: 'Read and share your knowledge and experiences with the team!',
+  title: 'Furaha Systems Knowbank',
+  tagline: 'Consult and share your knowledge and experiences with the team!',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -61,10 +61,10 @@ const config = {
         },
       },
       navbar: {
-        title: 'Furaha Knowbank',
+        title: 'Furaha Systems',
         logo: {
           alt: 'Furaha Knowbank Logo',
-          src: 'img/furaha_logo.svg',
+          src: 'img/furaha.png',
         },
         items: [
           {
