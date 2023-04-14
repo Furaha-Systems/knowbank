@@ -37,9 +37,7 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-        },
+        docs: false,
         blog: {
           showReadingTime: true,
         },
@@ -55,11 +53,6 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
-      docs: {
-        sidebar: {
-          hideable: true,
-        },
-      },
       navbar: {
         title: 'Furaha Systems',
         logo: {
@@ -67,36 +60,17 @@ const config = {
           src: 'img/furaha.png',
         },
         items: [
-          {
-            to: '/docs/intro',
-            position: 'left',
-            label: 'Docs',
-          },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/Furaha-Systems/knowbank',
             label: 'GitHub',
-            position: 'right',
+            position: 'left',
           },
         ],
       },
       footer: {
         style: 'dark',
-        links: [
-          {
-            title: 'Banks',
-            items: [
-              {
-                label: 'Docs',
-                to: '/docs/intro',
-              },
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-            ],
-          },
-        ],
+        links: [],
         copyright: `Copyright © ${new Date().getFullYear()} Furaha Systems.`,
       },
       prism: {
