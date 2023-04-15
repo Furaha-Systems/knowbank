@@ -1,18 +1,18 @@
-import React from 'react'
-import { useColorMode } from '@docusaurus/theme-common'
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
-import Giscus, { Theme } from '@giscus/react'
+import React from 'react';
+import { useColorMode } from '@docusaurus/theme-common';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Giscus, { Theme } from '@giscus/react';
 
-import { DocusaurusConfigCustomFields } from '../interfaces/config'
+import { DocusaurusConfigCustomFields } from '../interfaces/config';
 
 export function GiscusComponent(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext()
-  const { colorMode } = useColorMode()
+  const { siteConfig } = useDocusaurusContext();
+  const { colorMode } = useColorMode();
   const { repoId, category, categoryId }: DocusaurusConfigCustomFields =
-    siteConfig.customFields
+    siteConfig.customFields;
 
   const theme: Theme =
-    colorMode === 'dark' ? 'dark_tritanopia' : 'light_tritanopia'
+    colorMode === 'dark' ? 'dark_tritanopia' : 'light_tritanopia';
 
   return (
     <Giscus
@@ -29,5 +29,5 @@ export function GiscusComponent(): JSX.Element {
       lang="en"
       loading="lazy"
     />
-  )
+  );
 }
