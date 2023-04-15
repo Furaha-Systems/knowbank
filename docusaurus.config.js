@@ -1,10 +1,10 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-require('dotenv').config();
+require('dotenv').config()
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require('prism-react-renderer/themes/github')
+const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -52,7 +52,8 @@ const config = {
   ],
   customFields: {
     repoId: process.env.GH_REPO_ID,
-    discussionCategory: process.env.GH_DISCUSSION_CATEGORY,
+    category: process.env.GH_DISCUSSION_CATEGORY,
+    categoryId: process.env.GH_DISCUSSION_CATEGORY_ID
   },
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -86,6 +87,6 @@ const config = {
         darkTheme: darkCodeTheme
       }
     })
-};
+}
 
-module.exports = config;
+module.exports = config
