@@ -31,7 +31,7 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en']
   },
 
   presets: [
@@ -42,20 +42,23 @@ const config = {
         docs: false,
         blog: {
           showReadingTime: true,
-          routeBasePath: '/',
+          routeBasePath: '/'
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
-      }),
-    ],
+          customCss: require.resolve('./src/css/custom.css')
+        }
+      })
+    ]
   ],
-
+  customFields: {
+    repoId: process.env.GH_REPO_ID,
+    discussionCategory: process.env.GH_DISCUSSION_CATEGORY,
+  },
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       colorMode: {
-        defaultMode: "dark",
+        defaultMode: 'dark'
       },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
@@ -63,26 +66,26 @@ const config = {
         title: 'Knowbank',
         logo: {
           alt: 'Furaha Systems Logo',
-          src: 'img/furaha.png',
+          src: 'img/furaha.png'
         },
         items: [
           {
             href: 'https://github.com/Furaha-Systems/knowbank',
             label: 'Contribute',
-            position: 'left',
-          },
-        ],
+            position: 'left'
+          }
+        ]
       },
       footer: {
         style: 'dark',
         links: [],
-        copyright: `Copyright © ${new Date().getFullYear()} Furaha Systems.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Furaha Systems.`
       },
       prism: {
         theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-      },
-    }),
+        darkTheme: darkCodeTheme
+      }
+    })
 };
 
 module.exports = config;
