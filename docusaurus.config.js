@@ -1,10 +1,10 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-require('dotenv').config();
+require('dotenv').config()
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require('prism-react-renderer/themes/github')
+const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -31,7 +31,12 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en']
+    locales: ['en', 'id'],
+    localeConfigs: {
+      id: {
+        htmlLang: 'id-ID'
+      }
+    }
   },
 
   presets: [
@@ -72,8 +77,13 @@ const config = {
         items: [
           {
             href: 'https://github.com/Furaha-Systems/knowbank',
-            label: 'Contribute',
-            position: 'left'
+            className: 'header-github-link',
+            position: 'right',
+            'aria-label': 'GitHub repository'
+          },
+          {
+            type: 'localeDropdown',
+            position: 'right'
           }
         ]
       },
@@ -87,6 +97,6 @@ const config = {
         darkTheme: darkCodeTheme
       }
     })
-};
+}
 
-module.exports = config;
+module.exports = config
