@@ -1,0 +1,37 @@
+backend:
+  name: github
+  repo: Furaha-Systems/knowbank
+  branch: main
+  auth_scope: repo
+  open_authoring: true
+
+publish_mode: editorial_workflow
+
+media_folder: "static/img"
+public_folder: "/img/"
+
+collections:
+  - name: articles
+    label: Articles
+    folder: blog
+    identifier_field: title
+    extension: mdx
+    format: frontmatter
+    widget: list
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { name: title, label: Title, widget: string, required: true }
+      - { name: body, label: Body, widget: markdown, required: true }
+      - { name: slug, label: Slug, widget: string }
+      - name: tags
+        label: Tags
+        widget: list
+      - name: authors
+        label: Authors
+        widget: list
+        fields:
+          - { name: name, label: Name, widget: string, required: true }
+          - { name: title, label: Title, widget: string, required: false } 
+          - { name: url, label: URL, widget: string, required: false } 
+          - { name: imageUrl, label: ImageURL, widget: string, required: false }
