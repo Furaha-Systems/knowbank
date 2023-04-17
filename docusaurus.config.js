@@ -70,6 +70,7 @@ const config = {
           src: 'img/furaha.png'
         },
         items: [
+          { to: '/tags', label: 'Tags', position: 'left' },
           {
             href: 'https://github.com/Furaha-Systems/knowbank',
             className: 'header-github-link',
