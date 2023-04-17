@@ -24,6 +24,16 @@ collections:
       - { name: title, label: Title, widget: string, required: true }
       - { name: body, label: Body, widget: markdown, required: true }
       - { name: slug, label: Slug, widget: string }
+      - name: description
+        label: Meta Description
+        widget: string
+        required: false
+        hint: Description for SEO (by default uses first line of text below the frontmatter)
+      - name: image
+        label: Meta Image
+        widget: string
+        required: false
+        hint: Image URL for SEO
       - name: enableComments
         label: Enable Comments
         widget: boolean
@@ -35,6 +45,7 @@ collections:
         label: Authors
         widget: list
         fields:
+          - { name: key, label: Key, widget: string, required: false, hint: Global author key (only when directly writing to GitHub) }
           - { name: name, label: Name, widget: string, required: true }
           - { name: title, label: Title, widget: string, required: false } 
           - { name: url, label: URL, widget: string, required: false } 
